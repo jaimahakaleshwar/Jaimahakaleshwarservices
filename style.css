@@ -1,0 +1,1009 @@
+/* General Body and Container Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #FFA500; /* Dark Teal */
+    color: #fff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #80cbc4; /* Light Teal */
+}
+
+/* Mobile Menu Toggle (Hidden on Desktop) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin-bottom: 4px;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-banner.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay for readability */
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero-section p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* CTA Buttons */
+.cta-button {
+    display: inline-block;
+    background-color: #ff9800; /* Orange */
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.cta-button:hover {
+    background-color: #e68900; /* Darker Orange */
+}
+
+.secondary-cta {
+    background-color: #4CAF50; /* Green */
+}
+
+.secondary-cta:hover {
+    background-color: #45a049;
+}
+
+.primary-cta {
+    background-color: #00796b; /* Darker Teal */
+    margin-left: 15px;
+}
+
+.primary-cta:hover {
+    background-color: #00695c;
+}
+
+/* General Section Styles */
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #004d40;
+}
+
+/* Services Overview */
+.services-overview {
+    background-color: #f9f9f9;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.service-cards .card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.service-cards .card:hover {
+    transform: translateY(-10px);
+}
+
+.service-cards .card h3 {
+    color: #004d40;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.service-cards .card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.service-cards .card a {
+    display: inline-block;
+    color: #00796b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.service-cards .card a:hover {
+    text-decoration: underline;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    background-color: #e0f2f1; /* Light Teal background */
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.feature-item h3 {
+    color: #004d40;
+    font-size: 22px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-item h3 i { /* Placeholder for icon font if you add one */
+    margin-right: 10px;
+    color: #ff9800;
+    font-size: 28px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #f9f9f9;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.testimonial-card span {
+    font-weight: bold;
+    color: #004d40;
+}
+
+/* CTA Banner */
+.cta-banner {
+    background-color: #00796b; /* Darker Teal */
+    color: #fff;
+    padding: 60px 20px;
+}
+
+.cta-banner h2 {
+    color: #fff;
+    font-size: 40px;
+}
+
+.cta-banner p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #222;
+    color: #eee;
+    padding: 40px 0 20px;
+    font-size: 14px;
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: left;
+}
+
+.footer-col h3 {
+    color: #80cbc4;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #eee;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ff9800;
+}
+
+.footer-col p {
+    margin-bottom: 10px;
+}
+
+.footer-col a {
+    color: #eee;
+    text-decoration: none;
+}
+
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #bbb;
+}
+
+.footer-bottom a {
+    color: #80cbc4;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design (Mobile-First) */
+@media (max-width: 768px) {
+    header .container {
+        flex-wrap: wrap;
+    }
+
+    nav {
+        order: 3; /* Move nav below logo and toggle */
+        width: 100%;
+        display: none; /* Hidden by default for mobile */
+        flex-direction: column;
+        background-color: #004d40;
+        padding: 10px 0;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+        order: 2;
+    }
+
+    .hero-section h1 {
+        font-size: 36px;
+    }
+
+    .hero-section p {
+        font-size: 18px;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+
+    .cta-banner .cta-button {
+        display: block;
+        width: fit-content;
+        margin: 15px auto;
+    }
+
+    .cta-banner .primary-cta {
+        margin-left: auto;
+    }
+
+    .service-cards, .features-grid, footer .container {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    section h2 {
+        font-size: 30px;
+    }
+
+    .testimonial-card {
+        padding: 20px;
+    }
+
+    .testimonial-card p {
+        font-size: 16px;
+    }
+
+    .footer-col {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 28px;
+    }
+
+    .hero-section p {
+        font-size: 16px;
+    }
+}
+
+
+/* --- New Styles for Contact Page --- */
+
+/* Page Hero Section (can be reused for other pages) */
+.page-hero {
+    background-color: #00796b; /* Darker Teal */
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 40px;
+}
+
+.page-hero h1 {
+    font-size: 44px;
+    margin-bottom: 15px;
+}
+
+.page-hero p {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contact Details Section */
+.contact-details {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.contact-details h2 {
+    color: #004d40;
+    margin-bottom: 40px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    text-align: left;
+}
+
+.contact-info-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+}
+
+.contact-info-card h3 {
+    color: #004d40;
+    font-size: 24px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info-card h3 i { /* Font Awesome icon styling */
+    margin-right: 15px;
+    font-size: 32px;
+    color: #ff9800; /* Orange */
+}
+
+.contact-info-card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Allows button to align to bottom */
+}
+
+.contact-info-card .cta-button {
+    margin-top: auto; /* Pushes button to bottom of card */
+    width: auto; /* Override default button width */
+    text-align: center;
+    padding: 12px 20px; /* Adjust padding */
+    font-size: 16px;
+}
+
+.contact-info-card address {
+    font-style: normal; /* Override default italic address style */
+    margin-bottom: 20px;
+}
+
+.contact-info-card .working-hours {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+
+/* Contact Form Section */
+.contact-form-section {
+    padding: 60px 0;
+    background-color: #e0f2f1; /* Light Teal background */
+    text-align: center;
+}
+
+.contact-form-section h2 {
+    color: #004d40;
+    margin-bottom: 20px;
+}
+
+.form-intro {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #004d40;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    width: calc(100% - 20px); /* Adjust for padding */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 120px;
+}
+
+.contact-form button {
+    background-color: #ff9800; /* Orange */
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto; /* Override general cta-button width */
+    display: block; /* Make it a block element to center with auto margins */
+    margin: 20px auto 0 auto; /* Center the button */
+}
+
+.contact-form button:hover {
+    background-color: #e68900; /* Darker Orange */
+}
+
+/* Service Areas Map Section */
+.service-areas-map {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.service-areas-map h2 {
+    color: #004d40;
+    margin-bottom: 20px;
+}
+
+.service-areas-map p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.map-embed {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.map-embed iframe {
+    display: block; /* Remove extra space below iframe */
+}
+
+/* Responsive adjustments for Contact Page */
+@media (max-width: 768px) {
+    .page-hero h1 {
+        font-size: 36px;
+    }
+
+    .page-hero p {
+        font-size: 18px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info-card {
+        padding: 25px;
+    }
+
+    .contact-info-card h3 {
+        font-size: 22px;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: calc(100% - 24px); /* Adjust for padding and border */
+    }
+}
+
+@media (max-width: 480px) {
+    .page-hero h1 {
+        font-size: 28px;
+    }
+
+    .page-hero p {
+        font-size: 16px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+}
+/* --- New Styles for About Page --- */
+
+/* Our Story Section */
+.our-story {
+    padding: 60px 0;
+    text-align: left; /* Adjust for text readability */
+}
+
+.our-story h2 {
+    text-align: center;
+    color: #004d40;
+    margin-bottom: 40px;
+}
+
+.story-content {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 30px;
+    align-items: center; /* Vertically align text and image */
+}
+
+.story-image {
+    max-width: 450px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex-shrink: 0; /* Prevents image from shrinking too much */
+}
+
+.story-content p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Allows text to take available space */
+}
+
+/* Our Values Section */
+.our-values {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.our-values h2 {
+    color: #004d40;
+    margin-bottom: 40px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.value-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+}
+
+.value-item i { /* Font Awesome icon styling */
+    font-size: 48px;
+    color: #00796b; /* Darker Teal */
+    margin-bottom: 20px;
+}
+
+.value-item h3 {
+    color: #004d40;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.value-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Our Team Section */
+.our-team {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.our-team h2 {
+    color: #004d40;
+    margin-bottom: 20px;
+}
+
+.our-team > p { /* Targeting the paragraph directly under h2 */
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.team-card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.team-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Circular images */
+    object-fit: cover; /* Ensures image covers the circle */
+    margin-bottom: 20px;
+    border: 4px solid #00796b;
+}
+
+.team-card h3 {
+    color: #004d40;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.team-card p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.team-card .bio {
+    font-size: 15px;
+    color: #777;
+    font-style: italic;
+}
+
+/* Reusing why-choose-us from index.html, but with secondary-section class */
+.secondary-section {
+    background-color: #e0f2f1; /* Light Teal background */
+}
+
+/* Responsive adjustments for About Page */
+@media (max-width: 768px) {
+    .story-content {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center; /* Center content when stacked */
+    }
+
+    .story-image {
+        max-width: 100%; /* Ensure image fills container */
+        margin-bottom: 20px;
+    }
+
+    .values-grid, .team-members {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+
+    .value-item, .team-card {
+        padding: 25px;
+    }
+
+    .our-story h2, .our-values h2, .our-team h2 {
+        font-size: 30px;
+    }
+
+    .our-team > p {
+        font-size: 16px;
+    }
+}
+
+/* --- New Styles for Coming Soon Page --- */
+
+.coming-soon-hero {
+    background: linear-gradient(rgba(0, 77, 64, 0.8), rgba(0, 121, 107, 0.8)), url('images/maintenance-background.jpg.jpeg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.coming-soon-hero h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.coming-soon-hero p {
+    font-size: 22px;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+
+.coming-soon-hero .sub-message {
+    font-size: 18px;
+    color: #e0f2f1; /* Lighter teal for sub-message */
+    margin-bottom: 40px;
+}
+
+/* Specific styling for CTA buttons on this page if needed, otherwise uses general */
+.coming-soon-hero .cta-button {
+    margin: 10px;
+}
+
+.other-services-promo {
+    background-color: #f0f8f8; /* Very light teal */
+    padding: 60px 0;
+    text-align: center;
+}
+
+.other-services-promo h2 {
+    color: #004d40;
+    margin-bottom: 40px;
+}
+
+.quick-contact {
+    padding: 60px 0;
+    background-color: #ff9800; /* Orange background */
+    color: #fff;
+    text-align: center;
+}
+
+.quick-contact h2 {
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.quick-contact p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.quick-contact .cta-button {
+    background-color: #004d40; /* Dark teal button on orange background */
+}
+
+.quick-contact .cta-button:hover {
+    background-color: #00332e;
+}
+
+/* Responsive adjustments for Coming Soon Page */
+@media (max-width: 768px) {
+    .coming-soon-hero {
+        padding: 80px 20px;
+    }
+    .coming-soon-hero h1 {
+        font-size: 40px;
+    }
+    .coming-soon-hero p {
+        font-size: 18px;
+    }
+    .coming-soon-hero .sub-message {
+        font-size: 16px;
+    }
+    .quick-contact h2 {
+        font-size: 32px;
+    }
+    .quick-contact p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .coming-soon-hero h1 {
+        font-size: 32px;
+    }
+    .coming-soon-hero p {
+        font-size: 16px;
+    }
+    .coming-soon-hero .cta-button {
+        display: block; /* Stack buttons on very small screens */
+        margin: 10px auto;
+    }
+}
+
+/* Icon Placeholders (if you plan to use an icon font like Font Awesome) */
+/* For now, just a placeholder. You'd link a CDN for a real icon font. */
+/* .icon-star::before { content: '⭐'; }
+.icon-fast::before { content: '⚡'; }
+.icon-warranty::before { content: '✅'; }
+.icon-price::before { content: '💰'; } */
